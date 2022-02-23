@@ -8,6 +8,7 @@
     cursor: pointer;
   }
 }
+
 .main {
   padding: 30px;
   height: 100vh;
@@ -25,7 +26,8 @@
       margin-left: 5rem;
       padding: 3rem;
       .mid-content {
-        font-size: 48px;
+        font-size: 36px;
+        font-family: gm;
       }
       .resume {
         display: flex;
