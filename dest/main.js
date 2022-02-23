@@ -6,7 +6,6 @@ function ready() {
 function removeLoad() {
   var el = document.getElementById("shiba");
   el.setAttribute("style", "display: none;");
-  console.log(el);
 }
 ready();
 
@@ -21,7 +20,7 @@ function customCursor(options) {
         speed: 0.1,
         movingDelay: 300, // fire event onStop after delay
         hasHover: false, // has hover events
-        hoverTarget: $("a[href], button"),
+        hoverTarget: $("a[href], button,h1"),
         touchDevices: false, // show on touch devices
         onMove: function (data) {},
       },
