@@ -1,7 +1,8 @@
 var el1 = document.getElementsByTagName("body")[0];
-el1.setAttribute("style", "overflow: hidden;");
 function ready() {
-  setTimeout(removeLoad, 2000);
+  el1.setAttribute("style", "overflow: hidden;");
+  el1.setAttribute("style", "pointer: none;");
+  setTimeout(removeLoad, 3000);
 }
 function removeLoad() {
   var el = document.getElementById("shiba");
