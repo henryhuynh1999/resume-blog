@@ -1,0 +1,38 @@
+.mid-left-des {
+  img {
+    width: 75%;
+  }
+}
+
+.pj {
+  display: flex;
+  .pj-left {
+    margin-left: 100px;
+    .pj-left-des {
+      width: 75%;
+    }
+  }
+  .pj-right {
+    width: 50%;
+    display: flex;
+    .pj-right-info {
+      width: 500px;
+      padding-top: 130px;
+      &__shiba {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #d3c9c9;
+        padding-bottom: 20px;
+        .pj-right-stt {
+          font-size: 16px;
+          font-family: gl;
+          // padding-right: 100px;
+        }
+        .pj-right-name {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+}

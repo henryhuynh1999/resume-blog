@@ -1,0 +1,131 @@
+// css header
+// css header
+.header {
+  width: 100%;
+  max-width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 1);
+  opacity: 0;
+  -webkit-transform: translateY(-80px);
+  transform: translateY(-80px);
+  -webkit-transition: all $t ease;
+  transition: all $t ease;
+  z-index: 205;
+  @include xs {
+    // background-color: $black-cl;
+    height: 70px;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all $t ease;
+    transition: all $t ease;
+  }
+  &__ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -65px;
+    @include xs {
+      display: none;
+    }
+    & li {
+      height: 100%;
+      margin-left: 25px;
+      margin-right: 25px;
+      @include sm {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      & a {
+        width: 100%;
+        height: 100%;
+        color: #b2bec3;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        position: relative;
+        opacity: 0.8;
+        @include sm {
+          font-size: 13px;
+        }
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background-color: $white-cl;
+          display: inline-block;
+          position: absolute;
+          bottom: 30px;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          -webkit-transition: all $t ease;
+          transition: all $t ease;
+        }
+        &.hidden {
+          opacity: 1;
+        }
+        &.hidden::before {
+          display: none;
+        }
+        &.hidden img {
+          width: 60px;
+        }
+        &:hover::before {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: all $t ease;
+          transition: all $t ease;
+        }
+        &:hover {
+          opacity: 1;
+          color: $white-cl;
+          -webkit-transition: all $t ease;
+          transition: all $t ease;
+        }
+        &.active::before {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &.active {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all $t ease;
+    transition: all $t ease;
+  }
+  &__mobile {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    @include xs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 50px;
+      }
+    }
+    &-open {
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+      }
+      h2 {
+        color: $white-cl;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

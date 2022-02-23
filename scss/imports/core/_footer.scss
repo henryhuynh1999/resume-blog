@@ -1,0 +1,100 @@
+// .footer {
+//     text-align: center;
+//     background-color: $bg-cl;
+//     height: 140vh;
+//     margin-top: -500px;
+//     display: flex;
+//     align-items: flex-end;
+//     padding: 100px 0;
+//     @include xs {
+//         height: 110vh;
+//     }
+//     .container {
+//         position: relative;
+//     }
+//     &__top {
+//         position: relative;
+//         img {
+//             width: 70px;
+//             @include xs {
+//                 width: 60px;
+//             }
+//         }
+//         &::before {
+//             content: '';
+//             width: 40%;
+//             height: 1px;
+//             background-color: $line-cl;
+//             display: inline-block;
+//             position: absolute;
+//             top: 50%;
+//             right: 0;
+//             transform: translateY(-50%);
+//             // @include xs {
+//             //     width: 150px;
+//             // }
+//         }
+//         &::after {
+//             content: '';
+//             width: 40%;
+//             height: 1px;
+//             background-color: $line-cl;
+//             display: inline-block;
+//             position: absolute;
+//             top: 50%;
+//             left: 0;
+//             transform: translateY(-50%);
+//             // @include xs {
+//             //     width: 150px;
+//             // }
+//         }
+//     }
+//     &__bottom {
+//         margin-top: 50px;
+//         line-height: 30px;
+//         .footer-text {
+//             color: $white-cl;
+//         }
+//     }
+//     &__totop {
+//         position: absolute;
+//         right: 0;
+//         transform: rotate(90deg);
+//         text-align: center;
+//         cursor: pointer;
+//         @include xs {
+//             transform: initial;
+//             right: initial;
+//             position: initial;
+//         }
+//         h2 {
+//             color: $white-cl;
+//             text-transform: uppercase;
+//             font-size: 10px;
+//             position: relative;
+//             margin-top: -25px;
+//             @include xs {
+//                 margin-top: 30px;
+//                 font-size: 16px;
+//             }
+//             &::before {
+//                 content: '';
+//                 width: 130px;
+//                 height: 1px;
+//                 background-color: $line-cl;
+//                 display: inline-block;
+//                 @include mid();
+//                 margin-left: -110px;
+//                 transition: all $t ease;
+//                 @include xs {
+//                     margin-left: initial;
+//                     margin-top: 10px;
+//                 }
+//             }
+//         }
+//         &:hover h2::before {
+//             margin-left: 0;
+//             transition: all $t ease;
+//         }
+//     }
+// }

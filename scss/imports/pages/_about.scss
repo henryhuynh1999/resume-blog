@@ -1,0 +1,23 @@
+.info {
+  display: flex;
+  .info-left {
+    img {
+      width: 75%;
+      margin-left: 10px;
+    }
+  }
+  .info-right {
+    margin-top: 100px;
+    p {
+      font-size: 16px;
+      font-family: gl;
+    }
+    span {
+      font-size: $height-basic;
+      font-family: gb;
+    }
+    &__content {
+      margin-top: 50px;
+    }
+  }
+}
