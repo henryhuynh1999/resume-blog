@@ -1,13 +1,26 @@
 .info {
   display: flex;
+  @include xs {
+    flex-direction: column;
+  }
   .info-left {
     img {
       width: 75%;
       margin-left: 10px;
+      @include md {
+        width: 100%;
+        margin-top: 20px;
+      }
+      @include xs {
+        width: 100%;
+      }
     }
   }
   .info-right {
     margin-top: 100px;
+    @include xs {
+      margin-top: 0;
+    }
     p {
       font-size: 16px;
       font-family: gl;
@@ -18,6 +31,11 @@
     }
     &__content {
       margin-top: 50px;
+      a {
+        @include xs {
+          font-size: 24px;
+        }
+      }
     }
   }
 }

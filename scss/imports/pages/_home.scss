@@ -8,26 +8,52 @@
     cursor: pointer;
   }
 }
-
 .main {
   padding: 30px;
-  height: 100vh;
+  @include xs {
+    padding: 12px;
+  }
+  height: calc(var(--vh, 1vh) * 100);
   .nav {
     padding: auto;
     display: flex;
+    position: relative;
     justify-content: space-between;
     font-size: $height-small;
+    &-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
   .mid {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include xs {
+      flex-direction: column;
+    }
+    @include md {
+      flex-direction: column;
+    }
     .mid-left {
       margin-left: 5rem;
       padding: 3rem;
+      @include xs {
+        margin-left: 0;
+        margin-top: 5rem;
+      }
       .mid-content {
         font-size: 36px;
         font-family: gl;
+        @include xs {
+          font-size: 16px;
+        }
       }
       .resume {
         display: flex;
@@ -41,6 +67,10 @@
           }
           span {
             color: #161f38;
+            font-size: 16px;
+            @include xs {
+              font-size: 10px;
+            }
           }
         }
         .resume-img {
@@ -60,6 +90,24 @@
         writing-mode: vertical-rl;
         text-orientation: mixed;
         font-size: 10px;
+        @include md {
+          display: none;
+        }
+        @include xs {
+          display: none;
+        }
+      }
+      &-hero {
+        lottie-player {
+          width: 100%;
+          height: 100%;
+          @include xs {
+            display: none;
+          }
+          @include md {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -69,5 +117,15 @@
     justify-content: space-between;
     position: relative;
     top: 80px;
+    &-left {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }

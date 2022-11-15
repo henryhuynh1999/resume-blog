@@ -3,18 +3,38 @@
     width: 75%;
   }
 }
-
 .pj {
   display: flex;
+  @include xs {
+    flex-direction: column;
+    justify-content: center;
+  }
   .pj-left {
     margin-left: 100px;
+    @include md {
+      align-self: center;
+      margin-left: 0;
+    }
+    @include xs {
+      align-self: center;
+      margin-left: 0;
+    }
     .pj-left-des {
       width: 75%;
+      @include md {
+        width: 90%;
+      }
+      @include xs {
+        width: 50%;
+      }
     }
   }
   .pj-right {
     width: 50%;
     display: flex;
+    @include xs {
+      width: 100%;
+    }
     .pj-right-info {
       width: 500px;
       padding-top: 130px;
@@ -27,10 +47,16 @@
         .pj-right-stt {
           font-size: 20px;
           font-family: gl;
+          @include xs {
+            font-size: 16px;
+          }
           // padding-right: 100px;
         }
         .pj-right-name {
           font-size: 64px;
+          @include xs {
+            font-size: 32px;
+          }
         }
       }
     }
